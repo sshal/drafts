@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Bands</title>
+    <meta charset="UTF-8" />
+    <script>
+        var xmlhttp;
+
+        function getBands() {
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = loadData;
+
+            xmlhttp.open("GET", "bands.php", true);
+            xmlhttp.send();
+        }
+
+        function loadData() {
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                displayData();
+            }
+        }
+        function addToList() {
+            var band = document.getElementById("band").value;
+            var song = document.getElementById('song').value;
+
+            var fullXML = xmlhttp.responseXML;
+            // Create New Elements
+            var newElement = fullXML.createElement("bands");
+            var bandElement = fullXML.createElement("band");
+            var songElement = fullXML.createElement("song");
+            //Create text Nodes add user values
+            var bandText = document.createTextNode(band);
+            var songText = document.createTextNode(song);
+            //Assemble the element
+            bandElement.appendChild(bandText);
+            songElement.appendChild(songText);
+            newElement.appendChild(bandElement);
+            newElement.appendChild(songElement);
+
+            //Add the element to the document
+            fullXML.childNodes[0].append(newElement);
+            displayData();
+        }
+        function displayData() {
+            var bandXML = xmlhttp.responseXML.getElementsByTagName('bands');
+            var output = "<table>";
+            output += "<tr><th>Band</th><th>Song</th></tr>";
+            for (var i = 0; i < bandXML.length; i++){
+                //console.log("Node " + i);
+                var line = "<tr>";
+                var bandElement = bandXML[i].getElementsByTagName('band');
+                var bandName = bandElement[0].firstChild.nodeValue;
+                var songElement = bandXML[i].getElementsByTagName('song');
+                var songName = songElement[0].firstChild.nodeValue;
+                line += "<td>" + bandName + "</td><td>" + songName + "</td>";
+                line += "</tr>";
+                output += line;
+            }
+            output += "<tr>";
+            output += "<td><input type='text' id='band'/></td>";
+            output += "<td><input type='text' id='song'/></td>";
+            output += "</tr>";
+            output += "</table>";
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+  </head>
+  <body>
+      <div id='result'></div>
+      <input type="button" value="Get Bands!" onclick="getBands()"/>
+      <input type="button" value="Add to List" onclick="addToList()"/>
+  </body>
+</html>

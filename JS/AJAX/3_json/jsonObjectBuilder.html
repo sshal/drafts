@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSON Object Builder</title>
+    <meta charset="UTF-8" />
+    <script>
+        'use strict'
+
+        var xmlhttp;
+
+        function createObject() {
+            var song = document.getElementById('song').value;
+            var artist = document.getElementById('artist').value;
+            var year = document.getElementById('year').value;
+            var rating = document.getElementById('rating').value;
+
+            var jsonSong = `{"song": "${song}", "artist": "${artist}", `;
+            jsonSong += `"year": "${year}", "rating": "${rating}"}`;
+            //console.log(jsonSong);
+            sendJson(jsonSong);
+        }
+
+        function sendJson(json) {
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = receiveResponse;
+            xmlhttp.open("GET", ("receivesJSON.php?json=" + json), true );
+            xmlhttp.send();
+        }
+
+        function receiveResponse() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById('response').innerHTML =
+                xmlhttp.responseText;
+            }
+        }
+    </script>
+  </head>
+  <body>
+     <table>
+         <tr>
+             <td>Song</td><td><input type="text" id="song" /></td>
+         </tr>
+         <tr>
+             <td>Artist</td><td><input type="text" id="artist" /></td>
+         </tr>
+         <tr>
+             <td>Year</td><td><input type="text" id="year" /></td>
+         </tr>
+         <tr>
+             <td>Rating</td><td><input type="text" id="rating" /></td>
+         </tr>
+     </table>
+     <input type="button" value="Create Object" onclick="createObject()" />
+     <div id="response"></div>
+  </body>
+</html>

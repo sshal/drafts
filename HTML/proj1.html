@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- Comment in html -->
+<html>
+  <head>
+    <title>Test page</title>
+    <meta charset='utf-8'/>
+    <!--<base href='http://www.yandex.ru' target='_blank'>-->
+    <link href='style_1.css' rel='stylesheet'/>
+    <meta name="description" content="My test page">
+    <meta name="keywords" content="HTML,CSS">
+    <meta name="author" content="Student">
+    <script>console.log("Hello!")</script>
+    <style>address {color: green}</style>
+  </head>
+  <body>
+    <abbr title='World Wide Web'>WWW</abbr><hr>
+    <address>
+      JOHN SMITH<br>
+      100 MAIN ST<br>
+      PO BOX 1022<br>
+      SEATTLE WA 98104<br>
+      USA
+    </address><hr>
+    <header>
+      An element typically contains:
+        one or more heading elements, logo or icon, authorship information
+        <nav>Major link of navigation</nav>
+    </header><hr>
+      <main>
+        <article>
+          The tag specifies independent, self-contained content. An article should
+          make sense on its own and it should <br> be possible to distribute it
+          independently from the rest of the site.Potential sources for the element:
+            <ul>
+              <li>Forum post</li>
+              <li>Blog post</li>
+              <li>News story</li>
+              <li>Comment</li>
+            </ul>
+        </article><hr>
+        <aside>
+          This tag defines <span>some <strong>content</strong> aside from</span>
+          the content it is placed in. The aside content should be related to the surrounding
+          content.
+        </aside><hr>
+        <section>
+          Defines sections in a document, such as chapters, headers, footers,
+          or any other sections of the document.
+        </section>
+        <footer>
+          A element typically contains:
+          <ol>
+            <li>authorship information</li>
+            <li>copyright information</li>
+            <li>contact information</li>
+            <li>sitemap</li>
+            <li>back to top links</li>
+            <li>related documents</li>
+          </ol>
+        </footer>
+        <audio controls loop muted> <!--autoplay-->
+          <source src='piano.mp3' type='audio/mpeg'>
+          Your browser does not support the audio element.
+        </audio><hr>
+        <video width="320" height="240" controls>
+          <source src="forrest_gump.mp4" type="video/mp4">
+<!--<track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">-->
+        </video>
+        <b>Bold</b> These <i>tags</i> uses in last turn (after strong, em, etc.)<br>
+        <bdi>إيان</bdi> <bdo dir='rtl'>12345</bdo><hr>
+        <blockquote>
+          What goes around comes around
+        </blockquote><hr>
+        <p><q cite="http://www.yandex.ru">What goes around comes around</q></p>
+        <button disabled>text, img, etc.</button><hr>
+        <!--form(_id)|formaction='url'|formenctype|formmethod='GET/SET'
+        |formnovalidate|formtarget|type='reset/submit/button'|name|value-->
+        <cite>New York Times</cite> reported about <mark>it</mark> yesterday<hr>
+        <code>This tag for <s>computer</s> code</code><br>
+        <em>Emphasized text</em><br>
+        <kbd>Keyboard input</kbd><hr>
+        <samp>Sample output from a computer program</samp>
+        <var>Variable</var>
+        <table>
+          <colgroup>
+            <col style="background: red">
+            <col span="2" style="background: yellow">
+            <col>
+            <col style="background: green">
+          </colgroup>
+          <caption>Learn Your Multiplication Tables</caption>
+          <thead>
+            <tr>
+              <th>X</th><th>1</th><th>2</th><th>3</th><th>4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th><td>1</td><td>2</td><td>3</td><td>4</td>
+            </tr>
+            <tr>
+              <th>2</th><td>2</td><td>4</td><td>6</td><td>8</td>
+            </tr>
+            <tr>
+              <th>3</th><td>3</td><td>6</td><td>9</td><td>12</td>
+            </tr>
+            <tr>
+              <th>4</th><td>4</td><td>8</td><td>12</td><td>16</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="5">Total</th>
+            </tr>
+          </tfoot>
+        </table>
+        <dl>
+          <dt>Term</dt>
+          <dd>description of <del>termin</del> <ins>term</ins></dd>
+        </dl><hr>
+        <input list="browsers">
+        <p><dfn id="html-def" title="description">HTML</dfn> is the standard markup
+          language for creating web pages.
+        </p>
+        <datalist id="browsers">
+          <option value="Internet Explorer">
+          <option value="Firefox">
+          <option value="Chrome">
+        </datalist>
+        <hr>
+        <details>
+          <summary>Copyright 1999-2014.</summary>
+          <p> - by <small>Refsnes Data.</small> All Rights Reserved.</p>
+        </details><hr>
+        <!-- <embed src="" width="10" height"10" type=""> -->
+        <figure>
+          <img src='img1.png' alt="picture">
+          <figcaption>A picture</figcaption>
+        </figure>
+        <label form="f1">Exapmle of form</label>
+        <form action="" method="GET/SET" name="" target="" novalidate id="f1">
+          <fieldset form="" name="">
+            <legend>Personalia</legend>
+            <h3>Headers (H1-H6)</h3>
+            <label for="lab">Laboratory</label>
+            <input type="text" form="id" autofocus id="lab"><br>
+            <input type="checkbox" name="genre" value="comedy" checked>Comedy
+            <input type="checkbox" name="genre" value="action">Action<br>
+            <select>
+              <optgroup label="cars">
+                <option value="lada">Lada</option>
+                <option value="bmw">Bmw</option>
+              </optgroup>
+                <option value="skates">Skates</option>
+                <option value="skiis">Skiis</option>
+            </select>
+            Encryption: <keygen name="security">
+          </fieldset>
+          <textarea rows="5" cols="10" placeholder="Comment"></textarea>
+        </form>
+        <time datetime="2008-02-14 20:00">20:00</time>
+        <iframe name="dframe" height="200" width="200" src="1.pdf"></iframe><br>
+        <meter min="1" max="10" optimum="5" low="2" high="7" value="8"></meter>
+        <progress value="22" max="100"></progress>
+        <u>parragraph</u>.Ф
+        <p> you must be familiar with the XML<wbr>Http<wbr>Request Object. </p>
+    </main>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <object width="10" height="10" data=""></object>
+    <p>I want to be a programmer</p>
+    <pre>This       is  text
+      is formatted.
+    </pre>
+    <p>This is H<sub>2</sub>O. And that is x<sup>2</sup>.</p>
+    <a href="https://www.rambler.ru" target="dframe">Link</a>
+    <hr>
+
+    <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+    <map name="planetmap">
+      <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm">
+      <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm">
+      <area shape="circle" coords="124,58,8" alt="Venus" href="venus.htm">
+    </map>
+  </body>
+</html>
+
+<canvas></canvas>

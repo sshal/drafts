@@ -1,0 +1,297 @@
+/*page-break-inside|before|after, perspective*/
+* {
+    box-sizing: border-box;
+    color: #1a1580;
+}
+p.inlin {
+    display: inline;
+}
+@fontface {
+    font-family: 'Lobster';
+    src: url('https://fonts.googleapis.com/css?family=Orbitron');
+}
+@keyframes chan {
+    0%   {top: 0px; left: 0px}
+    25%  {top: 0px; left: 40px}
+    50%  {top: 40px; left: 40px}
+    75%  {top: 40px; left: 0px}
+    100% {top: 0px; left: 0px}
+}
+@keyframes chan1 {
+    from  {top: 0px; left: 0px}
+    to  {top: 0px; right: 20px}
+}
+div.moved {
+    width: 50px;
+    height: 50px;
+    background: #fa91f2;
+    position: relative;
+    animation: chan 4s cubic-bezier(.17,.67,.83,.67) 1s 3 alternate;
+}
+div.backgr {
+    height: 500px;
+    width: 500px;
+    border: 10px dashed red;
+    background: url("2.jpg") left bottom/cover no-repeat border-box fixed,
+    url("1.png") right top/100px no-repeat content-box scroll;
+    background-blend-mode: screen;
+    padding-left: 20px;
+}
+div.bord1 {
+    height: 200px;
+    width: 200px;
+    background: yellow;
+    border: 3px dotted green;
+    border-radius: 25px;
+    border-top-right-radius: 100%;
+}
+table, td {
+    border: 3px solid black;
+    border-spacing: 10px;
+    caption-side: bottom;
+    empty-cells: hide;
+    table-layout: fixed;
+}
+div.imagebord {
+    border: 10px solid transparent;
+    width: 100px;
+    height: 100px;
+    background: #8f11fa;
+    border: 10px solid transparent;
+    -webkit-border-image: url('border.png') 30 round;
+}
+div.bsh {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px 5px red, -5px -5px 0 10px green,
+    5px 5px 0 5px blue inset, -5px -5px 5px 5px purple inset;
+}
+div.cli {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+img.clip {
+    position: absolute;
+    clip: rect(10px,80px,95px,10px);
+    -webkit-filter: grayscale(100%);
+}
+div.columns {
+    columns: 50px 4;
+    column-rule: 3px dotted red;
+    column-gap: 50px;
+}
+div.columns:hover {
+    cursor: crosshair;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+div.flexes {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    /*flex-flow: direction wrap*/
+    height: 300px;
+    outline: 5px solid black;
+    align-items: center;
+    justify-content: space-around;
+}
+div.fl1, div.fl2, div.fl3, div.fl4, div.fl5 {
+    flex-basis: 25%;
+    height: 100px;
+    border: 1px solid black;
+}
+div.fl1 {
+    background: red;
+    flex-basis: 100px;
+    flex-grow: 1;
+    align-self: baseline;
+    /*order: 1*/
+}
+div.fl2 {
+    background: green;
+    flex-grow: 1;
+}
+div.fl3 {
+    background: blue;
+    flex-grow: 2;
+}
+div.fl4 {
+    background: yellow;
+    flex-grow: 1;
+}
+div.fl5 {
+    background: purple;
+    flex-grow: 1;
+}
+.flr {
+    width: 100px;
+    height: 100px;
+    float: right;
+    border: 1px solid black;
+    clear: both;
+    font: italic normal 23px/1.2em 'Lobster', cursive;
+    color: black;
+}
+span.spacing {
+    letter-spacing: 5px;
+    word-spacing: 15px;
+}
+ul {
+    list-style: circle inside url('leaf.png');
+}
+ol {
+    list-style: lower-roman outside;
+}
+ul li {
+    margin: 15px;
+}
+div.max {
+    max-height: 100px;
+    min-width: 100px;
+    background: blue;
+    border: 1px solid black;
+    width: 10px;
+    height: 500px;
+    opacity: 0.5;
+    margin-left: 50px;
+    outline: 5px dashed black;
+    outline-offset: 20px;
+}
+div.overf {
+    width: 100px;
+    height: 100px;
+    border: 3px dotted #f8a911;
+    overflow-y: scroll;
+    resize: horizontal;
+}
+q {
+    quotes: "«" "»" "‹" "›";
+}
+div.divspos {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    position: relative;
+}
+div.divspos div {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border: 1px solid black;
+}
+div.abs {
+    position: absolute;
+    background: red;
+    top: 20px;
+    right: 50px;
+    z-index: 2;
+}
+
+div.rel  {
+    position: relative;
+    background: blue;
+    top: 40px;
+    left: 50px;
+}
+div.fix  {
+    position: fixed;
+    background: brown;
+    bottom: 40px;
+    right: 40px;
+}
+pre {
+    tab-size: 50;
+}
+h2 {
+    text-align: justify;
+    text-align-last: left;
+    text-indent: 25%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}
+h2 span.s1 {
+    text-transform: uppercase;
+    text-decoration: overline;
+    color: red;
+}
+h2 span.s2 {
+    vertical-align: super;
+    color: green;
+}
+h1.ts1, h1.ts2 {
+    font-size: 60px;
+}
+.ts1 {
+    text-shadow: 5px 5px 5px red, -10px -10px 10px green;
+}
+.ts2 {
+    text-shadow: 10px 10px 0 purple, -10px -10px 0 brown;
+}
+div.tr1, div.tr2, div.tr3, div.tr4 {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+div.tr1:hover {
+    background: blue;
+    transform: scale(1.5);
+}
+div.tr2:hover {
+    background: red;
+    transform: skew(10deg, 10deg);
+}
+div.tr3:hover {
+    background: yellow;
+    transform: translate(20px, 20px);
+}
+div.tr4:hover {
+    background: green;
+    transform-origin: 50% 0%;
+    transform: rotate(45deg);
+    transition: all 1s linear 0.5s;
+}
+div.invis {
+    height: 100px;
+    width: 100px;
+    background: red;
+    border: 1px solid black;
+    visibility: hidden;
+}
+p.ws {
+    /*white-space: pre;*/
+    word-spacing: 50px;
+    word-wrap: break-word;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    resize: horizontal;
+    overflow: auto;
+}
+div.lgr {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    background: linear-gradient(0deg, red, blue); /*to top*/
+}
+div.radgr {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    background: radial-gradient(circle at bottom right, red, green);
+}
+@media screen and (max-width: 480px) {
+    *{
+        color: pink;
+    }
+}
+@media screen and (min-height: 400px) {
+    div{
+        margin: 30px 0;
+    }
+}

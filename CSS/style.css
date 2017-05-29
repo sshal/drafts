@@ -1,0 +1,140 @@
+header h1 {
+  color: red;
+}
+
+#idpar {
+  color: pink;
+}
+
+.cls {
+  color: blue;
+}
+
+div.bld p {
+  text-decoration: underline;
+  font-size: 200%;
+}
+
+div.bld > p {
+  text-decoration: line-through;
+  font-size: 80%;
+}
+
+footer.plus + p {
+  background: #ffa91f;
+  text-decoration: overline;
+}
+
+header ~ h1 {
+  background: brown;
+}
+
+[rick] {
+  color: yellow;
+}
+[risk$=ks] {
+  color: pink;
+}
+
+a:link {
+  text-decoration: line-through;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+a:active {
+  color: yellow;
+}
+
+.emp {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+div:empty {
+  background: black;
+}
+
+input#fa:focus {
+  box-shadow: -2px -2px 0 3px green;
+}
+body > input:disabled {
+  background: red;
+}
+input:checked {
+  height: 20px;
+  width: 20px;
+}
+input:enabled {
+  outline: 5px solid yellow;
+}
+p::first-letter {
+  color: orange;
+}
+
+input:required {
+  box-shadow: inset -5px -5px 0 5px grey;
+}
+input:optional {
+  background: red;
+}
+input:invalid {
+  color: red;
+}
+input:valid {
+  color: green;
+}
+p::selection{
+  background-color: purple;
+  color: white;
+}
+input:read-only {
+  background: pink;
+}
+input:read-write {
+  background: blue;
+}
+input:out-of-range {
+  outline: 5px solid red;
+}
+input:in-range {
+  outline: 5px solid green;
+}
+li:first-child {
+  background: red;
+}
+li:last-child {
+  background: yellow;
+}
+li:nth-child(2n) {
+  color: #83fa91;
+}
+
+li:nth-last-child(4) {
+  background: grey;
+}
+p:first-of-type {
+  background: green;
+}
+p:last-of-type {
+  background: purple;
+}
+p:nth-of-type(2) {
+  background: red;
+}
+p:nth-last-of-type(2) {
+  background: pink;
+}
+h3:only-child {
+  background: red;
+}
+h3:only-of-type {
+  background: yellow;
+}

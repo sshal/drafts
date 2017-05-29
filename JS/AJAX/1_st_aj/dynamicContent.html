@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dynamic content</title>
+    <meta charset="UTF-8" />
+    <script>
+         function changeContent() {
+             var theDiv = document.getElementById("content");
+             theDiv.innerHTML = "<h1>Look Ma! Changed Content!</h1>";
+         }
+    </script>
+  </head>
+  <body>
+      <div id='content'>
+          <p>Here is some HTML content</p>
+          <input type="button" value="Change Content"
+          onclick="changeContent()"/>
+      </div>
+  </body>
+</html>
