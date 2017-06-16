@@ -1,0 +1,91 @@
+git config --system|--global user.name “” | user.email | core.editor ...
+git config –list (-l) | user.name | credential.helper cache
+git config alias.<name> ‘log --stat --graph’ 		# do simplier your life – use aliases
+git init						# new rep
+git add | add *.c / p.html / --all			# add or stage
+git add -i						# add interactive
+git commit -a - m “message of commit”			# do commit, -a `stage the changes
+git commit --amend -m “”				# add up staged changes to previous commit
+git reset |HEAD (--) NameOfFile|			# to unstage the changes
+git reset --mixed HEAD^					# reset into unstaging, move commit before H
+git reset --soft HEAD^ 					# reset into staging, move commit before HEAD
+git reset --hard HEAD^					# return to last commit
+git checkout -- NameOfFile				# discard unstaged changes in working directory
+git show 9nfas9						# show definite commit
+git rm --cached | -f NameOfFile				# keep file or directly remove
+git mv oldName newName					# rename the file
+
+git reflog						# show history – strictly local history
+git show HEAD@{#}					# show old commits
+git show <branchname>@{time}				# show branch for moment
+git log -g						# log with reflog
+git show HEAD^ | git show HEAD~1			# show previous commit
+git log <br1>..<br2>					# reachable in br2 and not reachable in br1
+git log <br1>...<br2>					# reachable by either of two but not by both
+git log <br1> <br2> --not <br3>				# compare three branches
+	
+git status						# check on status
+git status --short | -s					# short command
+git diff						# changes, no staged
+git diff --staged | --cached				# staged changes
+git diff <base branch> <branch for compare>		# difference between branches
+git log							# show commits in reverse order
+git log -p -2						# -p – difference between commits, limit = 2 
+git log --stat						# abbreviated stats for each commit
+git log --pretty=oneline				# show commits in one line
+git log --pretty=format:“%H”				# change format
+git log --oneline					# show 1line commit (short # and message)	 
+git log --graph 					# make a graph
+git log --decorate					# show current branch
+git log --all 						# show diverges between the branches
+git log --since=2.weeks 				# additional parameters
+
+git tag							# show all tags in alphabetical order
+git show <tag>						# show information about the tag
+git tag -l “”						# search with pattern
+git tag -a v1.0 -m “my version 1.0”			# create annotated tag
+git tag v1.2-lw						# lightweight–without additional information
+git tag -a v1.3 9fceb02					# tagged commit later
+git tag -d <name>					# delete tag
+git push [remote name] [tagname] | --tags		# push tags to remote
+
+git stash						# save changes in memory
+git stash --keep-index					# save unstaged changes
+!!! stash can use any props like log			
+git stash clear 					# clear list
+git stash apply |stash@{#}| 				# apply saved changes
+git stash list 						# list of saved temp changes
+git stash drop stash@{#}				# delete stash item
+git stash pop stash@{#}					# apply changes and delete item
+git stash branch <branch name>				# create new branch and add stash item
+
+git cherry-pick <commit>				# add commit from another branch
+git cherry-pick --no-commit <commit1> <commit2>
+
+git blame -L <lines> <filename>				# debug changes in file
+
+git branch <name>					# create branch
+git checkout <name>					# change branch
+git checkout -b <name>					# create and change branch Name
+git merge <name>					# merge branch into current branch
+git branch -d|-D <name>					# delete the branch
+git branch 						# list of branches
+git branch -v						# see the last commit on each branch
+git branch --merged | --no-merged			# filter branches 
+git branch -vv						# list of local branches, show remote
+git branch -r						# remote brances
+
+git rebase <branch name>				#name of branch for merging to switched
+
+git clone <url> NameOfDirectory				# clone rep
+git remote (-v)						# show read/write url for remote
+git remote add <shortname> <url>			# add new remote depository
+git fetch [remote-name]					# download the data – you must manually merge
+git checkout -b [br-name] [remote-name/branch-name] | git checkout --track [rem-name/br-name]
+git branch -u [remote-name]/[branch-name]		# branch set up to track rem branch from remote
+git push -u [remote-name] [branch-name]			# add changes to remote
+git push [rem-name] --delete [br-name]			# delete remote branch
+git remote show [remote-name]				# more information
+git ls-remote [remote]					# show remote references
+git remote rename OldName NewName			# rename the remote
+
