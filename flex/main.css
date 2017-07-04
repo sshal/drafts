@@ -1,0 +1,64 @@
+/** {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}*/
+
+/*
+.container-inline-flex {
+    width: 600px;
+    margin: 10px;
+    display: inline-flex;
+}
+*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.container {
+    background-color: wheat;
+    font-size: 2rem;
+    font-family: arial;
+    font-weight: bold;
+    width: 900px;
+    text-align: center;
+    border: solid 2px brown;
+    margin: 0 auto;
+}
+.item {
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    /*width: 180px;
+      height: 180px;*/
+    width: 180px;
+    height: 180px;
+    padding-top:60px;
+}
+.color1 {background-color: red;}
+.color2 {background-color: green;}
+.color3 {background-color: blue;}
+.color4 {background-color: indigo;}
+.color5 {background-color: violet;}
+.color6 {background-color: darkslategray;}
+
+.container-flex {
+    display: flex; /* Declare a flex container */
+}
+/*
+    flex-wrap: wrap|wrap-reverse
+    flex-direction: row-reverse|column|column-reverse
+    flex-flow: [direction][wrap]
+    order: integer (not the same value)
+    justify-content: flex-start|flex-end|center|space-between|space-around *main axis
+    align-items: stretch|flex-start|flex-end|center|baseline *cross axis
+    align-self: auto|stretch|flex-start|flex-end|center|baseline *for 1 item
+    align-content: stretch|flex-start|flex-end|center|baseline * for flex lines in container
+    margin for flex - auto in 4 sides
+    flex-grow
+    flex-shrink
+    flex-basis
+    flex: <grow><shrink><basis>
+*/

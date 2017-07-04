@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test page</title>
+        <meta charset="utf-8" />
+        <link href="main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container container-flex">
+            <span class="item color1">1</span>
+            <span class="item color2">2</span>
+            <span class="item color3">3</span>
+            <span class="item color4">4</span>
+            <span class="item color5">5</span>
+            <span class="item color6" style="order: -1;">6</span>
+        </div>
+        <!--<div class="container container-inline-flex">
+            <span class="item color1">1</span>
+            <span class="item color2">2</span>
+            <span class="item color3">3</span>
+        </div>
+        <div class="container container-inline-flex">
+            <span class="item color4">4</span>
+            <span class="item color5">5</span>
+            <span class="item color6">6</span>
+        </div> -->
+        <div class="container container-flex"
+        style="margin-top: 20px;
+               justify-content: center;
+               align-items: baseline;">
+            <span class="item color1"
+                style="height: 100px; padding-top: 30px; margin: auto;">1</span>
+            <span class="item color2"
+                style="height: 120px; padding-top: 30px;">2</span>
+            <span class="item color3"
+                style="height: 80px; padding-top: 20px; align-self: flex-end">3</span>
+            <span class="item color4"
+                style="height: 40px; padding-top: 5px;">4</span>
+            <span class="item color5" style="height: 90px; padding-top: 25px;">5</span>
+        </div>
+        <div class="container container-flex" style="width: 800px;">
+            <span class="item color1" style="flex-basis: 200px; flex-shrink: 1;">1</span>
+            <span class="item color2" style="flex-basis: 200px; flex-shrink: 2;">2</span>
+            <span class="item color3" style="flex-basis: 200px; flex-shrink: 3;">3</span>
+        </div>
+        <div class="container container-flex" style="width: 300px;">
+            <span class="item color1" style="flex-basis: 200px; flex-shrink: 1;">1</span>
+            <span class="item color2" style="flex-basis: 200px; flex-shrink: 2;">2</span>
+            <span class="item color3" style="flex-basis: 200px; flex-shrink: 3;">3</span>
+        </div>
+        <div class="container container-flex" style="width: 800px;">
+            <span class="item color1" style="flex-grow: 0;">1</span>
+                <span class="item color2" style="flex-grow: 1;">2</span>
+                    <span class="item color3" style="flex-grow: 2;">3</span>
+        </div>
+        <div class="container container-flex" style="width: 1200px;">
+            <span class="item color1" style="width: 200px; flex: 0 0 auto;">1</span>
+            <span class="item color2" style="width: 200px; flex: 1 1 auto;">2</span>
+            <span class="item color3" style="width: 200px; flex: 0 2 auto;">3</span>
+            <span class="item color4" style="width: 200px; flex: 2 0 auto;">4</span>
+        </div>
+    </body>
+</html>
